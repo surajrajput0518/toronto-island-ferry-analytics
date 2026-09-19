@@ -440,10 +440,7 @@ with tab4:
     # Show tabular results
     st.markdown("#### Detailed Hourly Fleet Schedule & Backlog Risk")
     st.dataframe(
-        sim_results[["Hour", "demand", "transported", "backlog", "utilization", "required_trips", "status"]]
-            lambda val: "color: #ef4444; font-weight: bold;" if val == "Critical Backlog" else ("color: #f59e0b;" if val == "Congested" else "color: #10b981;"),
-            subset=["status"]
-        ),
+        sim_results[["Hour", "demand", "transported", "backlog", "utilization", "required_trips", "status"]],
         use_container_width=True
     )
 
