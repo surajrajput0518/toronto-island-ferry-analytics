@@ -9,7 +9,7 @@ def calculate_executive_kpis(df):
     
     # Peak interval and date
     max_redemption_idx = df["redemptions"].idxmax()
-    peak_record = df.iloc[max_redemption_idx]
+    peak_record = df.loc[max_redemption_idx]
     peak_val = int(peak_record["redemptions"])
     peak_ts = peak_record["timestamp"]
     
